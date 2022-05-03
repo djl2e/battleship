@@ -18,6 +18,10 @@ class Tile {
   isTileVisited() {
     return this.visited;
   }
+
+  getShip() {
+    return [this.shipId, this.shipPosition];
+  }
 }
 
 export default Tile;

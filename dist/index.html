@@ -7,6 +7,34 @@
   <title>Battleship</title>
 <script defer src="main.js"></script></head>
 <body>
-  
+  <div class="main opaque">
+    <h1>BATTLESHIP</h1>
+    <div class="board-container">
+      <div class="user-board-container">
+        <h2>Player Board</h2>
+        <div id="user-board" class="board"></div>
+      </div>
+      <div class="ai-board-container">
+        <h2>Computer Board</h2>
+        <div id="ai-board" class="board"></div>
+      </div>
+    </div>
+    <div class="broadcast">
+      <p>Ships Sunk</p>
+      <p id="score-board">0 : 0</p>
+    </div>
+  </div>
+
+  <div class="place-ship">
+    <h2>Place your ship:</h2>
+    <button id="rotate">Rotate</button>
+    <div id="setup-board" class="board"></div>
+  </div>
+
+  <div class="game-end hidden">
+    <h2>Game Over</h2>
+    <p id="game-result">Player Wins!</p>
+    <button id="replay-game">Replay?</button>
+  </div>
 </body>
 </html>

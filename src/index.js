@@ -1,4 +1,7 @@
-import Ship from './js-modules/ship';
+import './style.css';
+import gameSetup from './js-modules/ui-setup';
+import { userAttackUI, callReplay } from './js-modules/ui';
 
-const ship = new Ship(3);
-console.log(ship.shipLength);
+gameSetup();
+userAttackUI();
+callReplay();

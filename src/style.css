@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Water+Brush&display=swap');
+
+:root {
+  --set-ship-color: burlywood;
+  --ship-hit-color: darkseagreen;
+  --ship-miss-color: plum;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Water Brush', cursive;
+  font-size: 50px;
+  height: 5vh;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.opaque {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.board-container {
+  display: flex;
+  gap: 100px;
+}
+
+.ai-board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.board {
+  width: 50vh;
+  height: 50vh;
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.board div {
+  border: solid 1px black;
+}
+
+.empty:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+.broadcast {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 70vw;
+}
+
+.broadcast p {
+  margin: 0;
+}
+
+.place-ship {
+  height: 80vh;
+  width: 40vw;
+  background-color: whitesmoke;
+  position: fixed;
+  top: 12%;
+  left: 50%;
+  margin-left: -20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#rotate, #replay-game {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: whitesmoke;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+}
+
+#rotate:hover, #replay-game:hover {
+  transition: all 0.1s;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#setup-board div:hover {
+  cursor: pointer;
+}
+
+.hit {
+  background-color: var(--ship-hit-color);
+}
+
+.miss {
+  background-color: var(--ship-miss-color);
+}
+
+.permanent, .glow {
+  background-color: var(--set-ship-color);
+}
+
+.game-end {
+  height: 40vh;
+  width: 26vw;
+  background-color: whitesmoke;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  margin-left: -13vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#game-result {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
